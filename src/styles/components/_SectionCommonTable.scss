@@ -1,0 +1,189 @@
+.faucet_sectiontable_wrapper {
+  margin-top: 20px;
+  box-shadow: 0 5px 5px 0 rgb(82 63 105 / 5%);
+  .faucet_sectiontable_card {
+    padding: 25px;
+    min-height: 250px;
+    background: $bg-white !important;
+    .faucet_sectiontable_title {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include breakpoints(tablet) {
+        display: inherit;
+      }
+      select {
+        padding: 10px;
+        border: 1px solid hsla(0deg, 0%, 88%, 0.38) !important;
+        outline: none;
+        background: $gray-white-bg-color;
+        color: $text-default-color;
+      }
+      h2 {
+        font-size: 22px;
+        color: $text-default-color;
+        text-transform: capitalize;
+        font-weight: 500;
+        @include breakpoints(tablet) {
+          font-size: 20px;
+        }
+      }
+      button {
+        margin-top: 10px;
+        width: 130px;
+        padding: 10px 8px;
+        background: linear-gradient(
+          to bottom right,
+          #9b1fe9 0,
+          rgba(98, 89, 202, 0.6) 100%
+        );
+        box-shadow: $box-shadow-sidebar-menu;
+        color: #fff;
+        border: none;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: capitalize;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          opacity: 0.8;
+        }
+        @include breakpoints(portraitTablet) {
+          width: 100%;
+        }
+      }
+      .faucet_sectiontable_balance {
+        h2 {
+          font-size: 20px;
+          color: $text-default-color;
+          background-color: $bg-menu-active-color;
+          border-radius: 50px;
+          padding: 10px 30px;
+          @include breakpoints(tablet) {
+            margin-top: 10px !important;
+          }
+        }
+      }
+      .network_selector {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 10px !important;
+        .network_list {
+          position: relative;
+          .network_state {
+            font-size: 14px;
+            border: 1px solid hsla(0, 0%, 88%, 0.38);
+            padding: 10px 12px;
+            border-radius: 3px;
+            color: $text-default-color;
+            background: $bg-white;
+            cursor: pointer;
+            user-select: none;
+            @include breakpoints(semiPortraitTablet) {
+              padding: 5px 0px;
+            }
+            img {
+              margin-right: 8px;
+              margin-bottom: -2px;
+              @include breakpoints(semiPortraitTablet) {
+                margin-right: -6px;
+                width: 20px !important;
+                margin-bottom: -5px;
+              }
+            }
+            .network_name {
+              @include breakpoints(semiPortraitTablet) {
+                display: none;
+              }
+            }
+            span {
+              svg {
+                margin-bottom: -3px;
+                margin-left: 8px;
+              }
+            }
+          }
+          .network_list_popover {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            width: 225px;
+            height: auto;
+            background: white;
+            border: 1px solid hsla(0, 0%, 88%, 0.38);
+            padding: 10px;
+            border-radius: 3px;
+            box-shadow: 0px 4px 9px -8px grey;
+            @include breakpoints(largeMobile) {
+              right: -97px;
+            }
+            ul {
+              list-style: none;
+              li {
+                display: flex;
+                align-items: center;
+                padding: 7px 10px;
+                border-radius: 3px;
+                cursor: pointer;
+                &:hover {
+                  background: $gray-hover-bg-color;
+                }
+                img {
+                  width: 15px;
+                  height: 15px;
+                  margin-right: 10px;
+                }
+                p {
+                  font-size: 14px;
+                  color: $gray-white-text-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .faucet_sectiontable_table {
+      overflow-x: auto !important;
+      .common_table {
+        width: 100%;
+      }
+    }
+    .faucet_sectiontable_calculate {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include breakpoints(tablet) {
+        display: inherit;
+      }
+      h2 {
+        font-size: 20px;
+        font-weight: 600;
+        padding: 10px 0;
+        text-align: center;
+        border-radius: 50px;
+        color: #fff;
+        width: 40%;
+        margin: auto;
+        @include breakpoints(tablet) {
+          width: 100%;
+          font-size: 16px;
+        }
+      }
+      .credit_balance {
+        background: $bg-blue-linear-gradient;
+        box-shadow: $box-shadow-sidebar-menu;
+        @include breakpoints(tablet) {
+          margin-bottom: 20px !important;
+        }
+      }
+      .debit_balance {
+        background: $bg-success-linear-gradient;
+        box-shadow: $box-shadow-sidebar-menu;
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+@import "../../abstract/variable";
+@import "../../responsive/breakpoints";
+.faucet_common_modal_wrapper {
+  .faucet_all_card {
+    background: $bg-white !important;
+    .title {
+      h2 {
+        font-size: 22px;
+        font-weight: 500;
+        color: $text-default-color;
+      }
+    }
+    .faucet_commol_modal_field {
+      .form_group {
+        // display: flex;
+        margin: 15px 0;
+        @include breakpoints(portraitTablet) {
+          display: inherit;
+          margin: 0px;
+        }
+        .input_group {
+          //   width: 45%;
+          margin-top: 10px !important;
+          @include breakpoints(portraitTablet) {
+            width: auto;
+            margin: 10px 0;
+          }
+        }
+        .left {
+          margin-right: 18px !important;
+          // @include breakpoints(portraitTablet) {
+          //   margin-right: 16px !important;
+          // }
+        }
+        .right {
+          margin-right: 15px !important;
+        }
+        .select_group {
+          margin-right: 0px;
+          margin-top: 10px;
+          @include breakpoints(portraitTablet) {
+            margin-right: 0px;
+            margin: 10px 0;
+          }
+        }
+        select {
+          width: 100%;
+          padding: 10px 8px;
+          border: $border-header;
+          outline: none;
+          border-radius: 5px;
+          color: $text-default-color;
+          background: $gray-white-bg-color;
+        }
+        label {
+          width: 100%;
+          font-weight: 500;
+          font-size: 14px;
+          margin-bottom: 15px !important;
+          color: $text-default-color;
+          transition: all 0.3s ease-in-out;
+          @include breakpoints(tablet) {
+            font-size: 14px;
+          }
+        }
+        input {
+          width: 100%;
+          padding: 10px 8px;
+          border: $border-header;
+          outline: none;
+          border-radius: 5px;
+          color: $text-default-color;
+          background: $gray-white-bg-color;
+          transition: all 0.3s ease-in-out;
+          margin-top: 3px;
+        }
+        input:disabled {
+          background-color: $bg-body;
+          border: none;
+          cursor: no-drop;
+          color: $text-default-color !important;
+        }
+      }
+      .submit_button {
+        button {
+          margin-top: 10px;
+          width: 130px;
+          padding: 10px 8px;
+          background: linear-gradient(
+            to bottom right,
+            #9b1fe9 0,
+            rgba(98, 89, 202, 0.6) 100%
+          );
+          box-shadow: $box-shadow-sidebar-menu;
+          color: #fff;
+          border: none;
+          font-size: 14px;
+          font-weight: 500;
+          text-transform: capitalize;
+          border-radius: 3px;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            opacity: 0.8;
+          }
+          @include breakpoints(portraitTablet) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

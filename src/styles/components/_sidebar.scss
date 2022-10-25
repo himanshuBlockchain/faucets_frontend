@@ -1,0 +1,243 @@
+@import "../responsive/breakpoints";
+.faucets_sidebar {
+  .faucets_logo_container {
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background: $bg-white;
+    z-index: 9;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 15px;
+    border-bottom: $border-header;
+    height: 71px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h3 {
+      font-size: 25px;
+      color: $text_front_blue;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    img {
+      width: 100px;
+      height: 66px;
+      @include breakpoints(laptop) {
+        width: 100px;
+        height: 66px;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+  .faucets_user_profile {
+    padding: 5px 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    @include breakpoints(laptop) {
+      padding: 0 9px;
+    }
+    .faucets_user_pic {
+      img {
+        width: 75px;
+        height: 75px;
+        margin: auto;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+        @include breakpoints(laptop) {
+          width: 75px;
+          height: 75px;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+    .faucets_user_info {
+      font-family: $font-family;
+      color: $text-black;
+      transition: all 0.3s ease-in-out;
+      h2 {
+        font-size: 20px;
+        font-weight: 600;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $text_front_blue;
+        white-space: nowrap;
+      }
+      p {
+        font-size: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  .faucets_sidebar_menu {
+    .faucets_sidebar_menu_lists {
+      list-style: none;
+      padding: 10px 10px 0 0 !important;
+      .faucets_sidebar_menu_list {
+        margin: auto !important;
+        margin-bottom: 10px !important;
+        @include breakpoints(laptop) {
+          margin: auto !important;
+          margin-bottom: 10px !important;
+          transition: all 0.3s ease-in-out;
+          .active {
+            background-color: $bg-menu-active-color;
+          }
+        }
+        .faucets_nav_link {
+          padding: 6px 30px;
+          display: flex;
+          align-items: center;
+          border-radius: 0 0px 0px 0 !important;
+          // border-radius: 0 60px 60px 0 !important;
+          white-space: nowrap;
+          overflow: hidden;
+          transition: all 0.3s ease-in-out;
+          margin: 2px 0;
+          &:hover {
+            background-color: $bg-sidebar-hover;
+            .icon_text {
+              span {
+                svg {
+                  color: #6259ca;
+                }
+              }
+              p {
+                color: #6259ca;
+              }
+            }
+          }
+          .icon_text {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            transition: all 0.3s ease-in-out;
+            span {
+              margin-right: -1px;
+              margin-left: -3px;
+              svg {
+                font-size: 25px;
+                color: $text-sidebar-color;
+                padding: 12px;
+                border-radius: 50px;
+                transition: all 0.3s ease-in-out;
+                display: block !important;
+                opacity: 1 !important;
+                margin-top: -7px;
+              }
+            }
+            p {
+              font-size: 14px;
+              text-transform: capitalize;
+              font-weight: 500;
+              color: $text-sidebar-color;
+              transition: all 0.3s ease-in-out;
+              display: block;
+              opacity: 1;
+              @include breakpoints(laptop) {
+                display: none;
+                opacity: 0;
+              }
+            }
+          }
+          span {
+            svg {
+              font-size: 20px;
+              margin-bottom: -6px;
+              color: $text-gray;
+              display: block;
+              opacity: 1;
+              @include breakpoints(laptop) {
+                display: none !important;
+                opacity: 0 !important;
+              }
+            }
+          }
+        }
+        .active {
+          box-shadow: $box-shadow-sidebar-menu;
+          background: linear-gradient(
+            to bottom right,
+            #9b1fe9 0,
+            rgba(98, 89, 202, 0.6) 100%
+          );
+          color: white !important;
+          .icon_text {
+            svg,
+            p {
+              color: #fff !important;
+            }
+          }
+        }
+      }
+      .submenu {
+        ul {
+          list-style: none;
+          margin-left: 20px !important;
+          transition: all 0.3s ease-in-out;
+          @include breakpoints(laptop) {
+            display: none;
+            opacity: 0;
+          }
+          li {
+            a.dropdown {
+              position: relative;
+              font-size: 13px;
+              padding-left: 70px;
+              padding-top: 10px;
+              padding-bottom: 8px;
+              font-family: $font-family;
+              font-weight: 500;
+              color: $text-sidebar-color;
+              text-transform: capitalize;
+              &::before {
+                position: absolute;
+                content: "";
+                height: 2px;
+                width: 2px;
+                border: 2px solid rgb(104, 121, 139);
+                top: 50%;
+                left: 52px;
+                transition: all 0.5s;
+                transform: translateY(-50%) rotate(45deg);
+              }
+              &:hover {
+                background-color: transparent;
+                color: $text-sidebar-hover-color;
+                &::before {
+                  transform: translateY(-50%) rotate(-134deg);
+                }
+              }
+            }
+            // sidebar menu active css
+            .active {
+              color: $text-sidebar-hover-color !important;
+              background: transparent !important;
+              box-shadow: none !important;
+              &::before {
+                border: 2px solid $text-sidebar-hover-color !important;
+              }
+            }
+          }
+        }
+      }
+      // sidebar dropdown menu ative css
+      .active {
+        height: auto !important;
+        animation: menuToggle 0.3s alternate;
+      }
+    }
+  }
+}
+
+@keyframes menuToggle {
+  from {
+    height: 66px;
+    transition: all 0.3s ease-in-out;
+  }
+  to {
+    height: auto;
+    transition: all 0.3s ease-in-out;
+  }
+}

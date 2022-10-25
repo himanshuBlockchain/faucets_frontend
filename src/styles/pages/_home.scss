@@ -1,0 +1,185 @@
+.home_wrapper {
+  background: $gray-white-bg-color;
+  padding-bottom: 20px;
+  .notice_board {
+    background: $primary-bg;
+    padding: 25px 0;
+    .notice_text {
+      p {
+        font-size: 16px;
+        color: $white-text-color;
+        text-align: center;
+      }
+    }
+  }
+  .home_content {
+    .content_title {
+      margin: 48px 0;
+      @include breakpoints(tablet) {
+        width: 100%;
+      }
+      h2 {
+        font-size: 35px;
+        font-weight: 600;
+        font-family: $font-family;
+        color: $primary-bg;
+        margin-bottom: 20px !important;
+      }
+      p {
+        font-size: 16px;
+        color: $gray-white-text-color;
+        width: 680px;
+        line-height: 25px;
+        @include breakpoints(tablet) {
+          width: 100%;
+        }
+      }
+    }
+    // wallet form
+    .form_wrapper {
+      padding: 25px 20px;
+      border: 1px solid #eee;
+      background: $white-bg-color;
+      .form_warning {
+        background: $gray-white-bg-color;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        svg {
+          font-size: 18px;
+          color: $primary-text-color;
+        }
+        p {
+          font-size: 14px;
+          margin-left: 10px !important;
+        }
+      }
+      .wallet_form {
+        width: 50%;
+        margin-top: 15px !important;
+        @include breakpoints(tablet) {
+          width: 100%;
+        }
+        form {
+          label {
+            font-weight: 600;
+            color: $primary-text-color;
+            font-size: 13px;
+            width: 100%;
+          }
+          .form_group {
+            width: 50%;
+
+            input {
+              margin-top: 5px !important;
+              outline: none;
+              border: 1px solid #eee;
+              padding: 10px;
+              border-radius: 3px;
+              width: 100%;
+            }
+          }
+          .input_flex {
+            width: 100%;
+            display: inline-flex;
+          }
+          .wallet_address {
+            width: 100%;
+          }
+          .rqs_type {
+            margin-top: 10px !important;
+            .twice_input {
+              display: flex;
+              .rst_type_input {
+                margin-right: 15px !important;
+              }
+            }
+          }
+          .recaptch_form {
+            margin-top: 15px !important;
+            @include breakpoints(largeMobile) {
+              .captcha_google {
+                width: 100% !important;
+                div {
+                  width: 100% !important;
+                  iframe {
+                    width: 100% !important;
+                    .rc-anchor-container {
+                      width: 97% !important;
+                      .rc-anchor-normal-footer {
+                        display: none !important;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .submit_btn {
+            margin-top: 15px !important;
+            button {
+              background: $primary-bg;
+              color: $white-text-color;
+              text-transform: capitalize;
+              font-size: 13px;
+              font-weight: 600;
+              padding: 10px 15px;
+              border: none;
+              cursor: pointer;
+              border-radius: 3px;
+            }
+          }
+        }
+      }
+      .request_history {
+        margin-top: 30px !important;
+        h2 {
+          margin-bottom: 20px !important;
+          font-size: 15px;
+        }
+        .tabs {
+          @include breakpoints(semiPortraitTablet) {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          span {
+            margin-right: 10px;
+            padding: 10px 15px;
+            background: $gray-hover-bg-color;
+            font-size: 13px;
+            border-radius: 3px;
+            cursor: pointer;
+            user-select: none;
+            @include breakpoints(semiPortraitTablet) {
+              margin-bottom: 15px !important;
+            }
+          }
+        }
+        .active_tabs {
+          background: blue !important;
+          color: $white-text-color;
+        }
+        .history_text {
+          margin-top: 25px !important;
+          .history {
+            overflow-x: auto;
+            table {
+              border-collapse: collapse;
+              // width: 50%;
+              @include breakpoints(tablet) {
+                width: 100%;
+              }
+              th,
+              td {
+                border: 1px solid #eee;
+                padding: 8px;
+                font-size: 14px;
+                min-width: 80px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

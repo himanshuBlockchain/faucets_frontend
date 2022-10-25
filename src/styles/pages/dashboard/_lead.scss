@@ -1,0 +1,125 @@
+.faucet_page_wrapper {
+  margin-top: 20px;
+  .faucet_card {
+    padding: 25px;
+    min-height: 250px;
+    background: $bg-white !important;
+    .faucet_title {
+      text-align: start;
+      margin-bottom: 20px;
+      h2 {
+        font-size: 22px;
+        font-weight: 500;
+        text-transform: capitalize;
+        color: $text-default-color;
+        transition: all 0.3s ease-in-out;
+        @include breakpoints(tablet) {
+          font-size: 20px;
+        }
+      }
+    }
+    .faucet_field {
+      form {
+        .left {
+          margin-right: 33px !important;
+          @include breakpoints(portraitTablet) {
+            margin-right: 20px !important;
+          }
+        }
+        .right {
+          margin-right: 19px !important;
+        }
+        .form_group {
+          display: flex;
+          margin: 15px 0;
+          @include breakpoints(portraitTablet) {
+            display: inherit;
+            margin: 0px;
+          }
+          .input_group {
+            width: 50%;
+            @include breakpoints(portraitTablet) {
+              width: auto;
+              margin: 10px 0;
+            }
+          }
+          div {
+            width: 50%;
+            @include breakpoints(portraitTablet) {
+              width: auto;
+            }
+          }
+          .gender_select {
+            margin-right: 15px;
+            @include breakpoints(portraitTablet) {
+              margin-right: 0px;
+              margin: 10px 0;
+            }
+          }
+          label {
+            width: 100%;
+            font-weight: 500;
+            font-size: 14px;
+            margin-bottom: 10px !important;
+            color: $text-default-color;
+            transition: all 0.3s ease-in-out;
+            @include breakpoints(tablet) {
+              font-size: 14px;
+            }
+          }
+          input {
+            width: 100%;
+            padding: 10px 8px;
+            border: $border-header;
+            outline: none;
+            border-radius: 5px;
+            color: $text-default-color;
+            background: $gray-white-bg-color;
+            margin-top: 10px;
+          }
+          input:disabled {
+            background-color: $bg-body;
+            border: none;
+            cursor: no-drop;
+          }
+          select {
+            width: 100%;
+            padding: 10px 8px;
+            border: $border-header;
+            outline: none;
+            border-radius: 5px;
+            color: $text-default-color;
+            background: $gray-white-bg-color;
+          }
+        }
+        .submit_button {
+          button {
+            margin-top: 10px;
+            width: 130px;
+            padding: 10px 8px;
+            background: linear-gradient(
+              to bottom right,
+              #9b1fe9 0,
+              rgba(98, 89, 202, 0.6) 100%
+            );
+            box-shadow: $box-shadow-sidebar-menu;
+            color: #fff;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: capitalize;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              opacity: 0.8;
+            }
+            @include breakpoints(portraitTablet) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

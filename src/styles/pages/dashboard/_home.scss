@@ -1,0 +1,276 @@
+@import "../../abstract/variable";
+@import "../../responsive/breakpoints";
+.faucet_homPage_wrapper {
+  transition: all 0.3s ease-in-out;
+  .faucet_section_title {
+    h2 {
+      font-size: 22px;
+      font-weight: 500;
+      color: $text-default-color;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .network_selector {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px !important;
+    .network_list {
+      position: relative;
+      .network_state {
+        font-size: 14px;
+        border: 1px solid hsla(0, 0%, 88%, 0.38);
+        padding: 10px 12px;
+        border-radius: 3px;
+        color: $text-default-color;
+        background: $bg-white;
+        cursor: pointer;
+        user-select: none;
+        @include breakpoints(semiPortraitTablet) {
+          padding: 5px 0px;
+        }
+        img {
+          margin-right: 8px;
+          margin-bottom: -2px;
+          @include breakpoints(semiPortraitTablet) {
+            margin-right: -6px;
+            width: 20px !important;
+            margin-bottom: -5px;
+          }
+        }
+        .network_name {
+          @include breakpoints(semiPortraitTablet) {
+            display: none;
+          }
+        }
+        span {
+          svg {
+            margin-bottom: -3px;
+            margin-left: 8px;
+          }
+        }
+      }
+      .network_list_popover {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 225px;
+        height: auto;
+        background: white;
+        border: 1px solid hsla(0, 0%, 88%, 0.38);
+        padding: 10px;
+        border-radius: 3px;
+        box-shadow: 0px 4px 9px -8px grey;
+        @include breakpoints(largeMobile) {
+          right: -97px;
+        }
+        ul {
+          list-style: none;
+          li {
+            display: flex;
+            align-items: center;
+            padding: 7px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            &:hover {
+              background: $gray-hover-bg-color;
+            }
+            img {
+              width: 15px;
+              height: 15px;
+              margin-right: 10px;
+            }
+            p {
+              font-size: 14px;
+              color: $gray-white-text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .dashboard_form_wrapper {
+    .form_wrapper {
+      padding: 25px 20px;
+      // border: 1px solid hsla(0, 0%, 88%, 0.38);
+      background: $bg-white;
+      .form_warning {
+        background: $gray-white-bg-color;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        svg {
+          font-size: 18px;
+          color: $text-default-color;
+        }
+        p {
+          font-size: 14px;
+          margin-left: 10px !important;
+          color: $text-default-color;
+        }
+      }
+      .wallet_form {
+        width: 50%;
+        margin-top: 15px !important;
+        @include breakpoints(tablet) {
+          width: 100%;
+        }
+        form {
+          label {
+            font-weight: 600;
+            color: $text-default-color;
+            font-size: 13px;
+            width: 100%;
+          }
+          .form_group {
+            width: 50%;
+
+            input {
+              margin-top: 5px !important;
+              outline: none;
+              border: 1px solid hsla(0, 0%, 88%, 0.38);
+              padding: 10px;
+              border-radius: 3px;
+              width: 100%;
+              background: $gray-white-bg-color;
+            }
+          }
+          .input_flex {
+            width: 100%;
+            display: inline-flex;
+          }
+          .wallet_address {
+            width: 100%;
+          }
+          .rqs_type {
+            margin-top: 10px !important;
+            .twice_input {
+              display: flex;
+              .rst_type_input {
+                margin-right: 15px !important;
+              }
+            }
+          }
+          .submit_btn {
+            margin-top: 15px !important;
+            button {
+              background: linear-gradient(
+                to bottom right,
+                #9b1fe9 0,
+                rgba(98, 89, 202, 0.6) 100%
+              );
+              box-shadow: $box-shadow-sidebar-menu;
+              color: $white-text-color;
+              text-transform: capitalize;
+              font-size: 13px;
+              font-weight: 600;
+              padding: 10px 15px;
+              border: none;
+              cursor: pointer;
+              border-radius: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .faucet_dash_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    row-gap: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include breakpoints(4kdevice) {
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: 15px;
+    }
+    @include breakpoints(portraitTablet) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 15px;
+    }
+
+    .faucet_dash_card_wrapper {
+      position: relative;
+      padding: 30px 30px;
+      border-radius: 5px;
+      box-shadow: $box-shadow-1;
+      background-color: $bg-white;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+      @include breakpoints(laptop) {
+        height: 100px;
+      }
+      @include breakpoints(tablet) {
+        height: auto;
+      }
+      img {
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        transition: all 0.3s ease-in-out;
+      }
+      .faucet_content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        .faucet_widget_info {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          p {
+            font-size: 13px;
+            color: $text-default-color;
+            margin-bottom: 5px !important;
+            @include breakpoints(smLaptop) {
+              font-size: 15px;
+            }
+          }
+          h2 {
+            font-size: 22px;
+            font-weight: 500;
+            color: $text-default-color;
+            margin-bottom: 10px !important;
+            @include breakpoints(smLaptop) {
+              font-size: 18px;
+            }
+          }
+          a {
+            color: $text-black;
+            font-size: 13px;
+            text-transform: capitalize;
+            font-weight: 500;
+            &:hover {
+              color: $text-menu-active-color;
+            }
+          }
+        }
+        .faucet_widget_icon {
+          margin-right: 20px;
+          @include breakpoints(smLaptop) {
+            margin-right: 10px;
+          }
+          svg {
+            color: #fff;
+            font-size: 30px;
+            border-radius: 50px;
+            padding: 15px;
+            @include breakpoints(smLaptop) {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

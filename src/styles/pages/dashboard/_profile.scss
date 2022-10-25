@@ -1,0 +1,197 @@
+@import "../../abstract/variable";
+@import "../../responsive/breakpoints";
+.faucet_my_profile_page_wrapper {
+  margin-top: 10px;
+  .faucet_my_profile_card {
+    padding: 25px;
+    min-height: 250px;
+    background: $bg-white !important;
+    .faucet_section_title {
+      h2 {
+        font-size: 22px;
+        font-weight: 500;
+        text-transform: capitalize;
+        color: $text-default-color;
+        transition: all 0.3s ease-in-out;
+        @include breakpoints(tablet) {
+          font-size: 20px;
+        }
+      }
+    }
+    .faucet_profile_head {
+      margin-top: 20px;
+      .faucet_photo_content {
+        position: relative;
+        .faucet_cover_photo {
+          background: url("../../../assets/banner.jpg");
+          background-size: cover;
+          background-position: 50%;
+          min-height: 250px;
+          width: 100%;
+          border-radius: 20px;
+          @include breakpoints(tablet) {
+            min-height: 170px;
+          }
+          @include breakpoints(largeMobile) {
+            min-height: 120px;
+          }
+        }
+      }
+      .faucet_profile_short_info {
+        display: flex;
+        position: relative;
+        padding: 15px 20px;
+        @include breakpoints(tablet) {
+          display: inherit;
+          text-align: center;
+        }
+        .faucet_profile_photo {
+          max-width: 100px;
+          position: relative;
+          z-index: 1;
+          margin-top: -66px;
+          margin-right: 20px;
+          @include breakpoints(tablet) {
+            max-width: inherit;
+            text-align: center;
+          }
+          img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50% !important;
+          }
+          form {
+            input {
+              width: 88px;
+              @include breakpoints(tablet) {
+                margin: 10px 0;
+              }
+            }
+          }
+        }
+        .faucet_profile_info {
+          display: flex;
+          @include breakpoints(tablet) {
+            display: inherit;
+          }
+          .faucet_profile_name {
+            margin-right: 25px;
+            @include breakpoints(tablet) {
+              margin-right: 0px;
+            }
+            h2 {
+              font-size: 20px;
+              color: $text-sidebar-hover-color;
+              font-weight: 500 !important;
+              @include breakpoints(tablet) {
+                font-size: 16px;
+              }
+            }
+            p {
+              font-size: 15px;
+              color: $text-gray;
+              @include breakpoints(tablet) {
+                font-size: 12px;
+              }
+            }
+          }
+          .faucet_profile_email {
+            h2 {
+              font-size: 20px;
+              color: $text-default-color;
+              font-weight: 500;
+              transition: all 0.3s ease-in-out;
+              @include breakpoints(tablet) {
+                font-size: 16px;
+              }
+            }
+            p {
+              font-size: 15px;
+              color: $text-gray;
+              @include breakpoints(tablet) {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .faucet_profile_bottom {
+      margin-top: 15px;
+      .faucet_profile_title {
+        margin-bottom: 20px;
+        h2 {
+          font-size: 22px;
+          font-weight: 500;
+          text-transform: capitalize;
+          color: $text-default-color;
+          transition: all 0.3s ease-in-out;
+          @include breakpoints(tablet) {
+            font-size: 20px;
+          }
+        }
+      }
+      .faucet_profile_field {
+        .form_group {
+          display: flex;
+          margin: 15px 0;
+          @include breakpoints(portraitTablet) {
+            display: inherit;
+            margin: 0px;
+          }
+          .input_group {
+            width: 45%;
+            @include breakpoints(portraitTablet) {
+              width: auto;
+              margin: 10px 0;
+            }
+          }
+          .left {
+            margin-right: 33px !important;
+            @include breakpoints(portraitTablet) {
+              margin-right: 16px !important;
+            }
+          }
+          .right {
+            margin-right: 15px !important;
+          }
+          label {
+            width: 100%;
+            font-weight: 500;
+            font-size: 14px;
+            margin-bottom: 15px !important;
+            color: $text-default-color;
+            transition: all 0.3s ease-in-out;
+            @include breakpoints(tablet) {
+              font-size: 14px;
+            }
+          }
+          input {
+            width: 100%;
+            padding: 10px 8px;
+            border: $border-header;
+            outline: none;
+            border-radius: 5px;
+            color: $text-default-color;
+            background: $bg-body;
+            transition: all 0.3s ease-in-out;
+            margin-top: 10px;
+          }
+          input:disabled {
+            background-color: $bg-body;
+            border: none;
+            cursor: no-drop;
+            color: $text-default-color !important;
+          }
+          button {
+            background: linear-gradient(
+              to bottom right,
+              #9b1fe9 0,
+              rgba(98, 89, 202, 0.6) 100%
+            );
+          }
+        }
+      }
+    }
+  }
+}

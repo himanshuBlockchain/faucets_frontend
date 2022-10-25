@@ -1,0 +1,120 @@
+@import "../abstract/variable";
+@import "../responsive/breakpoints";
+
+.auth_page_wrapper {
+  // background: $gray-white-bg-color;
+  .container {
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+    // height: 80vh;
+    .auth_form {
+      width: 30%;
+      margin: 40px auto;
+      background: $white-bg-color;
+      padding: 20px;
+      border-radius: 3px;
+      border: 1px solid #eee;
+      box-shadow: 0px 2px 5px -4px grey;
+      @include breakpoints(smLaptop) {
+        width: 80%;
+      }
+      @include breakpoints(tablet) {
+        width: 100%;
+      }
+      .title {
+        margin-bottom: 20px !important;
+        h2 {
+          font-size: 30px;
+          font-weight: 600;
+          text-align: center;
+          @include breakpoints(tablet) {
+            font-size: 25px;
+          }
+        }
+      }
+      form {
+        .form_group {
+          margin-bottom: 10px !important;
+          position: relative;
+          a {
+            font-size: 14px !important;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+          }
+          label {
+            font-size: 12px;
+            font-weight: 600;
+          }
+          input {
+            width: 100%;
+            padding: 10px 0px;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #b8b4b4;
+            font-size: 14px;
+            background: transparent;
+            &::placeholder {
+              font-size: 13px;
+              color: #b4b4b4;
+            }
+            &:focus {
+              border-bottom: 1px solid $primary-text-color;
+            }
+          }
+          svg {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            user-select: none;
+          }
+          button {
+            text-transform: capitalize;
+            width: 100%;
+            padding: 10px 15px;
+            background: $primary-bg;
+            color: $white-text-color;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px !important;
+            border-radius: 3px;
+            font-size: 15px;
+            font-weight: 600;
+          }
+        }
+      }
+      .auth_footer {
+        margin-top: 20px !important;
+        p {
+          font-size: 13px;
+          font-weight: 600;
+          color: #000;
+          text-align: center;
+          a {
+            text-decoration: none;
+            color: $primary-text-color !important;
+          }
+        }
+        .auth_media {
+          text-align: center;
+          margin-top: 20px !important;
+          p {
+            font-size: 16px;
+            text-transform: capitalize;
+          }
+          .media {
+            margin-top: 20px !important;
+            svg {
+              margin: 10px;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@import "../../abstract/variable";
+@import "../../responsive/breakpoints";
+.faucet_addpayment_page_wrapper {
+  margin-top: 20px;
+  .faucet_addpayment_card {
+    padding: 25px;
+    min-height: 250px;
+    background: $bg-white !important;
+    .faucet_addpayment_title {
+      text-align: start;
+      margin-bottom: 20px;
+      h2 {
+        font-size: 22px;
+        font-weight: 500;
+        text-transform: capitalize;
+        color: $text-default-color;
+        transition: all 0.3s ease-in-out;
+        @include breakpoints(tablet) {
+          font-size: 20px;
+        }
+      }
+    }
+    .faucet_addpayment_field {
+      select {
+        width: 100%;
+        padding: 10px 8px;
+        border: $border-header;
+        outline: none;
+        border-radius: 5px;
+        color: $text-default-color;
+        background: $gray-white-bg-color;
+        margin-top: 10px;
+      }
+      label {
+        font-size: 14px !important;
+        color: $text-default-color;
+      }
+      form {
+        .form_group {
+          display: flex;
+          margin: 15px 0;
+          @include breakpoints(portraitTablet) {
+            display: inherit;
+            margin: 0px;
+          }
+          .input_group {
+            width: 98%;
+            @include breakpoints(portraitTablet) {
+              width: auto;
+              margin: 10px 0;
+            }
+          }
+          label {
+            width: 100%;
+            font-weight: 500;
+            font-size: 14px !important;
+            margin-bottom: 10px !important;
+            color: $text-default-color;
+            transition: all 0.3s ease-in-out;
+          }
+          input {
+            width: 100%;
+            padding: 10px 8px;
+            border: $border-header;
+            outline: none;
+            border-radius: 5px;
+            color: $text-default-color;
+            background: $gray-white-bg-color;
+            margin-top: 10px;
+          }
+        }
+        .submit_button {
+          button {
+            margin-top: 10px;
+            width: 100px;
+            padding: 10px 8px;
+            background: linear-gradient(
+              to bottom right,
+              #9b1fe9 0,
+              rgba(98, 89, 202, 0.6) 100%
+            );
+            box-shadow: $box-shadow-sidebar-menu;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            text-transform: capitalize;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              opacity: 0.8;
+            }
+            @include breakpoints(portraitTablet) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "../abstract/variable";
+@import "../responsive/breakpoints";
+table {
+  width: 100%;
+  border-collapse: collapse;
+  .table__head {
+    background: $gray-white-bg-color;
+    tr {
+      th {
+        padding: 15px 0;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        color: $text-default-color;
+        min-width: 50px;
+      }
+    }
+  }
+  .table__body {
+    tr {
+      td {
+        padding: 13px 5px;
+        font-size: 13px;
+        font-weight: 500;
+        border-bottom: 1px solid hsla(0, 0%, 88%, 0.38) !important;
+        color: $text-default-color;
+        min-width: 100px;
+        input {
+          border: none;
+          border-bottom: 1px solid #7b5eea !important;
+          padding: 10px;
+          outline: none;
+          text-align: center;
+          color: $text-default-color;
+          background: $gray-white-bg-color;
+        }
+      }
+    }
+  }
+}

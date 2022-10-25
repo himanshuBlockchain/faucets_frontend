@@ -1,0 +1,18 @@
+@import "../../abstract/variable";
+@import "../../responsive/breakpoints";
+
+.faucet_referral_table {
+  margin-top: 0px;
+  width: 100%;
+  margin-right: 22px;
+  min-height: 250px;
+  @include breakpoints(xtraLargeLaptop) {
+    width: 50%;
+    margin-right: 22px;
+  }
+  @include breakpoints(laptop) {
+    width: auto !important;
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+}
